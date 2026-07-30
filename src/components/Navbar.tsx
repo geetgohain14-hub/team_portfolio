@@ -27,24 +27,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logo Lockup */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 border-2 border-slate-900 overflow-hidden bg-white p-1 flex items-center justify-center shadow-[3px_3px_0px_0px_#0f172a]">
+          {/* Logo Only Lockup */}
+          <a href="#" className="flex items-center group shrink-0">
+            <div className="h-12 px-2 border-2 border-slate-900 bg-white flex items-center justify-center shadow-[3px_3px_0px_0px_#0f172a] hover:bg-slate-50 transition-colors">
               <img 
                 src="/logo-removebg-preview (1).png" 
                 alt="Cura Tech Logo" 
-                className="w-full h-full object-contain"
+                className="h-9 w-auto object-contain"
                 onError={(e) => {
-                  (e.target as HTMLElement).style.display = 'none';
+                  (e.target as HTMLImageElement).src = '/images/team/logo-removebg.png';
                 }}
               />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="font-black text-xl tracking-tight text-slate-900 uppercase">CURA TECH</span>
-                <span className="bg-orange-600 text-white font-bold text-xs px-2 py-0.5 border border-slate-900">MEDIA</span>
-              </div>
-              <p className="text-xs font-semibold text-slate-600 tracking-wider uppercase">Content & Lead Engine</p>
             </div>
           </a>
 

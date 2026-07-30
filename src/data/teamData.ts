@@ -124,7 +124,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: "geetartha-gohain",
     name: "Geetartha Borpatra Gohain",
-    role: "Video Editor, Graphic Designer & 3D Specialist",
+    role: "AI Automation and Growth Specialist",
     shortResponsibility: "Cinematic video ideation, Web Developement, AI workflows & content generation, Lead Capture Workflow",
     photoUrl: "/images/team/geetartha.jpg",
     phone: "+91 6002425512",
