@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --color-primary-orange: #d95d08;
+    --color-orange-brown: #c85a17;
+    --color-dark-brown: #7c2d12;
+    --color-light-bg: #ffffff;
+    --color-card-bg: #f8fafc;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #f1f5f9;
+    color: #0f172a;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom Sharp Bento Card Styles */
+.bento-card {
+  background-color: #ffffff;
+  border: 2px solid #0f172a;
+  border-radius: 0px;
+  box-shadow: 4px 4px 0px 0px #0f172a;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px 0px #c85a17;
+  border-color: #0f172a;
+}
+
+.bento-card-accent {
+  background-color: #fff7ed;
+  border: 2px solid #ea580c;
+  border-radius: 0px;
+  box-shadow: 4px 4px 0px 0px #ea580c;
+}
+
+.bento-card-dark {
+  background-color: #0f172a;
+  color: #ffffff;
+  border: 2px solid #020617;
+  border-radius: 0px;
+  box-shadow: 4px 4px 0px 0px #c85a17;
+}
+
+/* Grid Line Motif Background */
+.grid-bg-white {
+  background-color: #ffffff;
+  background-image: linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.grid-bg-orange {
+  background-color: #fff7ed;
+  background-image: linear-gradient(to right, rgba(200, 90, 23, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(200, 90, 23, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #c85a17;
+  border: 2px solid #0f172a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ea580c;
+}
