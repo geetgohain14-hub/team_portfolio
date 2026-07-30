@@ -44,7 +44,7 @@ export const TeamRoster: React.FC = () => {
                     alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     onError={(e) => {
-                      (e.target as HTMLElement).src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60';
+                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60';
                     }}
                   />
                   <div className="absolute top-2 right-2 bg-orange-600 text-white font-black text-[10px] uppercase px-2 py-1 border border-slate-900 shadow">
