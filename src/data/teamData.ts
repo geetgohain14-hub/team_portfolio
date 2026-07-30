@@ -21,7 +21,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: "brian-marak",
     name: "Brian Tengsrang R Marak",
-    role: "Team Lead · Social Media Manager & Video Editor",
+    role: "Team Lead · Social Media Manager",
     shortResponsibility: "Creative direction, storytelling, captions, content planning, on-ground capture",
     photoUrl: "/images/team/brian.jpg",
     phone: "9864975105",
@@ -57,7 +57,7 @@ export const teamMembers: TeamMember[] = [
     id: "avanish-daolagupu",
     name: "Avanish Kumar Daolagupu",
     role: "Strategic Planner & Marketing Coordinator",
-    shortResponsibility: "Marketing strategy, paid ads, analytics, customer targeting, campaign coordination",
+    shortResponsibility: "Marketing analysis & strategy, analytics, customer targeting, campaign coordination",
     photoUrl: "/images/team/avanish.jpg",
     phone: "+91-8638247120",
     email: "avanishkdaolagupu@gmail.com",
@@ -125,7 +125,7 @@ export const teamMembers: TeamMember[] = [
     id: "geetartha-gohain",
     name: "Geetartha Borpatra Gohain",
     role: "Video Editor, Graphic Designer & 3D Specialist",
-    shortResponsibility: "Cinematic video editing, motion graphics, 3D house previews, AI workflows & web",
+    shortResponsibility: "Cinematic video ideation, Web Developement, AI workflows & content generation, Lead Capture Workflow",
     photoUrl: "/images/team/geetartha.jpg",
     phone: "+91 6002425512",
     email: "geetartha1404@gmail.com",
@@ -139,8 +139,7 @@ export const teamMembers: TeamMember[] = [
       "Google Cloud & Meta Certified"
     ],
     skills: [
-      "3D House Previews & Motion Graphics",
-      "Cinematic Video Post-Production",
+      "Cinematic Video Overseer & Post-Production",
       "AI Workflow Automation & Custom GPTs",
       "Full-Stack Web Development (Next.js, Python)",
       "AWS SES/SNS Email Marketing Systems",
@@ -167,8 +166,8 @@ export const teamMembers: TeamMember[] = [
     education: "B.Com / Technical Specialist",
     languages: ["English", "Assamese", "Hindi"],
     keyStats: [
-      "Adobe Premiere & After Effects Specialist",
       "Co-Developer WxM Dropshipping Platform",
+      "Adobe Premiere & After Effects Specialist",
       "Rapid 24-Hour Reel Editing Pipeline",
       "Multi-Language Software Support (Python, C++)"
     ],

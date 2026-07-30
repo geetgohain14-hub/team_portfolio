@@ -29,53 +29,59 @@ export const TeamRoster: React.FC = () => {
           </p>
         </div>
 
-        {/* 5-Member Team Bento Grid (Square & Rectangular - Full Alignment) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {/* 5-Member Team Bento Grid (Square & Rectangular - High-Precision Alignment) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 items-stretch">
           {teamMembers.map((member) => (
             <div 
               key={member.id}
-              className="bento-card p-6 flex flex-col justify-between group hover:border-orange-600"
+              className="bento-card p-6 flex flex-col justify-between group hover:border-orange-600 transition-all"
             >
-              <div>
-                {/* Photo & Badge */}
-                <div className="relative border-4 border-slate-900 mb-4 bg-slate-100 overflow-hidden aspect-square shadow-[4px_4px_0px_0px_#0f172a]">
-                  <img
-                    src={member.photoUrl}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60';
-                    }}
-                  />
-                  <div className="absolute top-2 right-2 bg-orange-600 text-white font-black text-[10px] uppercase px-2 py-1 border border-slate-900 shadow">
-                    VERIFIED CV
+              <div className="flex flex-col h-full justify-between">
+                <div>
+                  {/* Photo & Badge */}
+                  <div className="relative border-4 border-slate-900 mb-5 bg-slate-100 overflow-hidden aspect-[4/3] shadow-[4px_4px_0px_0px_#0f172a]">
+                    <img
+                      src={member.photoUrl}
+                      alt={member.name}
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60';
+                      }}
+                    />
+                    <div className="absolute top-2.5 right-2.5 bg-orange-600 text-white font-black text-[10px] uppercase px-2.5 py-1 border border-slate-900 shadow-[2px_2px_0px_0px_#0f172a]">
+                      VERIFIED CV
+                    </div>
                   </div>
+
+                  {/* Name & Title Block */}
+                  <div className="min-h-[72px] mb-3">
+                    <h3 className="font-black text-xl text-slate-950 uppercase leading-snug tracking-tight">
+                      {member.name}
+                    </h3>
+                    <p className="text-xs font-extrabold text-orange-600 uppercase tracking-wide mt-1">
+                      {member.role}
+                    </p>
+                  </div>
+
+                  <div className="border-b-2 border-slate-900 pb-3 mb-4"></div>
+
+                  {/* Short Responsibility */}
+                  <p className="text-xs font-semibold text-slate-700 leading-relaxed mb-5 min-h-[44px]">
+                    {member.shortResponsibility}
+                  </p>
                 </div>
 
-                {/* Name & Title */}
-                <h3 className="font-black text-xl text-slate-950 uppercase mb-1 leading-snug">
-                  {member.name}
-                </h3>
-                <p className="text-xs font-extrabold text-orange-600 uppercase mb-3 border-b-2 border-slate-900 pb-2">
-                  {member.role}
-                </p>
-
-                {/* Short Responsibility */}
-                <p className="text-xs font-semibold text-slate-700 leading-relaxed mb-4">
-                  {member.shortResponsibility}
-                </p>
-
                 {/* Key Stat Badge Pill */}
-                <div className="bg-orange-50 border-2 border-orange-300 p-2.5 mb-4">
-                  <span className="text-[10px] font-black text-orange-950 uppercase block">Proven Metric:</span>
-                  <span className="text-xs font-extrabold text-slate-950">{member.keyStats[0]}</span>
+                <div className="bg-orange-50 border-2 border-orange-300 p-3 mb-5">
+                  <span className="text-[10px] font-black text-orange-950 uppercase block tracking-wider mb-0.5">Proven Metric:</span>
+                  <span className="text-xs font-extrabold text-slate-950 block">{member.keyStats[0]}</span>
                 </div>
               </div>
 
               {/* Action Button */}
               <button
                 onClick={() => setSelectedMember(member)}
-                className="w-full bg-slate-900 hover:bg-orange-600 text-white font-extrabold text-xs uppercase py-3 border-2 border-slate-900 shadow-[3px_3px_0px_0px_#0f172a] hover:translate-y-[-2px] transition-all flex items-center justify-center gap-2"
+                className="w-full bg-slate-900 hover:bg-orange-600 text-white font-extrabold text-xs uppercase py-3.5 border-2 border-slate-900 shadow-[3px_3px_0px_0px_#0f172a] hover:translate-y-[-2px] transition-all flex items-center justify-center gap-2 mt-auto"
               >
                 <span>View Full CV & Profile</span>
                 <ExternalLink className="w-4 h-4" />
@@ -86,32 +92,32 @@ export const TeamRoster: React.FC = () => {
           {/* 6th Bento Card: Why 5 Specialists Block */}
           <div className="bento-card-accent p-6 flex flex-col justify-between">
             <div>
-              <div className="flex items-center gap-2 mb-3">
-                <Sparkles className="w-5 h-5 text-orange-600" />
-                <span className="font-black text-xs uppercase text-orange-950">Why Hire The Unit?</span>
+              <div className="flex items-center gap-2 mb-4">
+                <Sparkles className="w-5 h-5 text-orange-600 shrink-0" />
+                <span className="font-black text-xs uppercase tracking-wider text-orange-950">Why Hire The Unit?</span>
               </div>
-              <h3 className="font-black text-xl text-slate-950 uppercase mb-3">
+              <h3 className="font-black text-xl text-slate-950 uppercase mb-4 leading-tight">
                 5 Specialists vs. 1 Solo Intern
               </h3>
-              <ul className="space-y-2 text-xs font-bold text-slate-800">
-                <li className="flex items-start gap-2">
+              <ul className="space-y-3 text-xs font-bold text-slate-800 mb-6">
+                <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0 mt-0.5" />
-                  <span><strong>On-Ground Capture:</strong> Brian & Aftab shoot 4K ground & drone.</span>
+                  <span className="leading-snug"><strong>On-Ground Capture:</strong> Brian & Aftab shoot 4K ground & drone.</span>
                 </li>
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0 mt-0.5" />
-                  <span><strong>Post-Production:</strong> Vivek & Geetartha edit reels & 3D renders.</span>
+                  <span className="leading-snug"><strong>Post-Production:</strong> Vivek & Geetartha edit reels & 3D renders.</span>
                 </li>
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0 mt-0.5" />
-                  <span><strong>Strategy & Ads:</strong> Avanish runs customer targeting & analytics.</span>
+                  <span className="leading-snug"><strong>Strategy & Ads:</strong> Avanish runs customer targeting & analytics.</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white border-2 border-slate-900 p-3 mt-4">
-              <span className="text-xs font-black text-slate-950 uppercase block">Instant Deployment:</span>
-              <span className="text-[11px] font-semibold text-slate-700">Pre-existing team synergy with 5M+ combined view track record.</span>
+            <div className="bg-white border-2 border-slate-900 p-4 mt-auto">
+              <span className="text-xs font-black text-slate-950 uppercase block mb-1">Instant Deployment:</span>
+              <span className="text-[11px] font-semibold text-slate-700 leading-relaxed block">Pre-existing team synergy with 5M+ combined view track record.</span>
             </div>
           </div>
         </div>
