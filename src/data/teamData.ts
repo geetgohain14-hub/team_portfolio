@@ -63,7 +63,7 @@ export const teamMembers: TeamMember[] = [
     email: "avanishkdaolagupu@gmail.com",
     location: "Guwahati, Assam",
     education: "B.Com in Marketing Management (5th Semester), Gauhati Commerce College",
-    languages: ["Dimasa (Native)", "English", "Assamese", "Hindi", "Bengali"],
+    languages: ["Dimasa (Native)", "English", "Assamese", "Hindi"],
     keyStats: [
       "500K+ Views in 2 Months (WxM Club)",
       "BPN Motors TATA Dealership Intern",
